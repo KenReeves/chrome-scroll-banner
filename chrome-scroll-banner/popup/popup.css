@@ -1,0 +1,156 @@
+/* Main container */
+.popup-container {
+  width: 380px;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: 'VT323', monospace;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* LED Preview Frame */
+.led-frame {
+  background: #000;
+  padding: 15px;
+  border-bottom: 2px solid #333;
+  text-align: center;
+}
+
+.preview-text {
+  color: #FFEB3B;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px rgba(255, 235, 59, 0.5);
+}
+
+/* Controls Container */
+.controls-container {
+  padding: 20px;
+}
+
+/* Toggle Switch */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #2a2a2a;
+  border-radius: 6px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #444;
+  transition: .3s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #FFEB3B;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.toggle-label {
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+/* Text Input */
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+#bannerText {
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+#bannerText:focus {
+  outline: none;
+  border-color: #FFEB3B;
+}
+
+/* Speed Selector */
+.speed-container {
+  margin-bottom: 10px;
+}
+
+.speed-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+#scrollSpeed {
+  width: 100%;
+  padding: 8px;
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#scrollSpeed:focus {
+  outline: none;
+  border-color: #FFEB3B;
+}
+
+/* Character Counter */
+#charCount {
+  display: block;
+  text-align: right;
+  font-size: 14px;
+  color: #888;
+  margin-top: 5px;
+} 

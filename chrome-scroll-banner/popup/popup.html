@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import VT323 font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="led-frame">
+      <div class="preview-text">LED SCROLL BANNER</div>
+    </div>
+    
+    <div class="controls-container">
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="bannerToggle">
+          <span class="slider round"></span>
+        </label>
+        <span class="toggle-label">Enable Banner</span>
+      </div>
+
+      <div class="input-container">
+        <label for="bannerText">Message:</label>
+        <textarea 
+          id="bannerText" 
+          maxlength="500" 
+          placeholder="Type your scrolling message..."></textarea>
+        <span id="charCount">0/500</span>
+      </div>
+
+      <div class="speed-container">
+        <label for="scrollSpeed">Speed:</label>
+        <select id="scrollSpeed">
+          <option value="slow">Slow</option>
+          <option value="medium" selected>Medium</option>
+          <option value="fast">Fast</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 

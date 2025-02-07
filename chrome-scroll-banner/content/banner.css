@@ -1,0 +1,53 @@
+/* Main banner container */
+#led-scroll-banner {
+    position: fixed;
+    top: 32px;  /* Position below bookmark bar */
+    left: 0;
+    right: 0;
+    height: 32px;  /* Height we agreed on */
+    background-color: #000;
+    color: #fff;
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    line-height: 32px;
+    overflow: hidden;
+    z-index: 2147483647;  /* Ensure banner stays on top */
+    display: none;  /* Hidden by default until toggled */
+}
+
+/* Scrolling text container */
+#led-scroll-text {
+    white-space: nowrap;
+    position: absolute;
+    width: max-content;  /* Allows text to maintain full width */
+    padding-left: 100%;  /* Start from right edge */
+}
+
+/* Animation classes for different speeds */
+.scroll-slow {
+    animation: scroll-left 60s linear infinite;
+}
+
+.scroll-medium {
+    animation: scroll-left 40s linear infinite;
+}
+
+.scroll-fast {
+    animation: scroll-left 25s linear infinite;
+}
+
+/* Scrolling animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* LED text effect */
+#led-scroll-text {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    letter-spacing: 2px;
+} 
